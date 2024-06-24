@@ -10,9 +10,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cat Dockerfile'
-                // withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
+                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
                     
-                // }
+                }
             }
         }
     }
